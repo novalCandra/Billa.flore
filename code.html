@@ -1,0 +1,520 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Billa.flore — Sweet Pastel Blooms &amp; WhatsApp Concierge</title>
+<!-- Tailwind CSS CDN with forms and container queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Font Awesome Icons for high-fidelity UI -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<!-- Google Fonts: Quicksand & Plus Jakarta Sans for the bubbly cute friendly look -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;family=Quicksand:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<!-- Tailwind Configuration matching the cute sweet pink/white MooMoo inspired theme -->
+<script data-purpose="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bloom: {
+              cream: '#FFF9FA',
+              milk: '#FFFFFF',
+              blush: '#FFF0F4',
+              softPink: '#FFE1E8',
+              bubblePink: '#FFB8C6',
+              accent: '#FF829D',
+              rose: '#E85D75',
+              deepRose: '#A23954',
+              cocoa: '#4A3B40',
+              muted: '#8A757B'
+            }
+          },
+          fontFamily: {
+            sans: ['Quicksand', 'Plus Jakarta Sans', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'Quicksand', 'sans-serif']
+          },
+          boxShadow: {
+            'cute-sm': '0 4px 12px rgba(255, 130, 157, 0.12)',
+            'cute': '0 8px 24px rgba(255, 130, 157, 0.16)',
+            'cute-lg': '0 16px 36px rgba(255, 130, 157, 0.22)',
+            'cute-card': '0 10px 28px -4px rgba(232, 93, 117, 0.12)'
+          },
+          borderRadius: {
+            '4xl': '2rem',
+            '5xl': '2.5rem'
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-styling">
+    body {
+      font-family: 'Quicksand', 'Plus Jakarta Sans', sans-serif;
+      background-color: #FFF9FA;
+      color: #4A3B40;
+    }
+    
+    /* Gingham / Pastel Cloud Pattern inspired by MooMoo promo sheet */
+    .bg-gingham-soft {
+      background-color: #FFF2F5;
+      background-image: 
+        linear-gradient(90deg, rgba(255, 184, 198, 0.22) 50%, transparent 50%),
+        linear-gradient(rgba(255, 184, 198, 0.22) 50%, transparent 50%);
+      background-size: 32px 32px;
+    }
+
+    .scallop-divider {
+      background-image: radial-gradient(circle at 12px -5px, transparent 12px, #A23954 13px);
+      background-size: 24px 20px;
+    }
+
+    .cute-badge-border {
+      border: 2.5px solid #FFD1DC;
+    }
+    
+    .dashed-border-pill {
+      border: 2px dashed #FFB8C6;
+    }
+</style>
+</head>
+<body class="min-h-screen bg-bloom-cream text-bloom-cocoa antialiased selection:bg-bloom-accent selection:text-white flex flex-col justify-between overflow-x-hidden">
+<!-- BEGIN: AnnouncementBar -->
+<aside class="bg-gradient-to-r from-bloom-rose via-bloom-accent to-bloom-rose text-white py-2 px-3 sm:px-6 text-xs sm:text-sm font-bold tracking-wide shadow-sm" data-purpose="whatsapp-ticker-bar">
+<div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1.5 sm:gap-2 text-center sm:text-left"><div class="flex items-center justify-center space-x-1.5 sm:space-x-2"><span class="inline-flex items-center justify-center w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-white text-bloom-rose text-[10px] sm:text-xs shadow-cute-sm flex-shrink-0">🌸</span><span class="font-extrabold tracking-wide text-[10px] sm:text-xs">SWEET CONCIERGE ACTIVE:</span><span class="hidden md:inline font-semibold text-xs">Free hand-tied pink silk ribbon &amp; 1-click WhatsApp order approval!</span></div><a class="inline-flex items-center space-x-1.5 font-bold text-white bg-white/20 hover:bg-white hover:text-bloom-rose px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full backdrop-blur-sm transition-all text-[10px] sm:text-xs" href="https://wa.me/15557897382?text=Hi%20Token%20Bloom!%20I%20would%20like%20to%20order%20flowers" rel="noopener noreferrer" target="_blank"><i class="fab fa-whatsapp text-emerald-300"></i><span>Direct Chat: +1 (555) 789-PETAL ♡</span></a></div>
+</aside>
+<!-- END: AnnouncementBar -->
+<!-- BEGIN: MainHeader -->
+<header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-bloom-softPink/60 transition-all">
+<div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between"><a class="flex items-center space-x-2 sm:space-x-3 focus:outline-none group" href="#"><div class="w-9 h-9 sm:w-12 sm:h-12 bg-bloom-blush rounded-full border-2 border-bloom-bubblePink shadow-cute flex items-center justify-center text-base sm:text-xl text-bloom-rose group-hover:scale-105 transition-transform flex-shrink-0"><span class="transform group-hover:rotate-12 transition-transform">🌸</span></div><div class="flex flex-col"><div class="flex items-center space-x-1"><span class="text-lg sm:text-2xl font-extrabold tracking-tight text-bloom-deepRose font-display leading-tight">Billa.flore</span><span class="text-xs text-bloom-accent hidden sm:inline">♡</span></div><span class="text-[9px] sm:text-[10px] font-bold text-bloom-muted tracking-widest uppercase -mt-0.5">Bespoke Florist</span></div></a><nav aria-label="Main Navigation" class="hidden md:flex items-center space-x-2 text-sm font-bold"><a class="px-4 py-2 rounded-full text-bloom-cocoa hover:text-bloom-rose hover:bg-bloom-blush transition-colors" href="#drops">Fresh Cuts</a><a class="px-4 py-2 rounded-full text-bloom-cocoa hover:text-bloom-rose hover:bg-bloom-blush transition-colors" href="#drops">Studio</a><a class="px-4 py-2 rounded-full bg-bloom-blush text-bloom-rose border border-bloom-bubblePink/60 font-extrabold shadow-sm" href="#drops">Hot Drops ✿</a><a class="px-4 py-2 rounded-full text-bloom-cocoa hover:text-bloom-rose hover:bg-bloom-blush transition-colors" href="#social">Story &amp; Social</a></nav><div class="flex items-center space-x-2 sm:space-x-3"><a class="bg-gradient-to-r from-bloom-rose to-bloom-accent hover:from-bloom-accent hover:to-bloom-rose text-white text-xs sm:text-sm font-extrabold px-3 py-1.5 sm:px-5 sm:py-2.5 rounded-full shadow-cute hover:shadow-cute-lg hover:-translate-y-0.5 transition-all inline-flex items-center space-x-1.5 sm:space-x-2 flex-shrink-0" href="https://wa.me/15557897382?text=Hello%20Token%20Bloom,%20I'd%20like%20to%20order%20flowers" rel="noopener noreferrer" target="_blank"><i class="fab fa-whatsapp text-white text-sm sm:text-base"></i><span class="hidden sm:inline">💬 WhatsApp Order</span><span class="sm:hidden">Order</span></a></div></div>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: MainContent -->
+<main class="flex-grow overflow-x-hidden">
+<!-- BEGIN: HeroPromoSection (Styled like MooMoo Banner Promo Toko with soft gingham & floating cute chips) -->
+<section class="bg-gingham-soft border-b border-bloom-bubblePink/40 py-8 sm:py-16 px-4 sm:px-6 lg:px-8 text-center relative overflow-hidden"><div class="absolute left-6 top-8 hidden lg:block opacity-90 select-none animate-bounce" style="animation-duration: 4s;"><div class="bg-white/95 px-4 py-2 rounded-full border border-bloom-bubblePink shadow-cute flex items-center space-x-2 text-xs font-bold text-bloom-rose"><span>☁️</span><span>Hand-tied with love</span><span>♡</span></div></div><div class="absolute right-3 sm:right-6 lg:right-8 top-3 sm:top-8 select-none transform rotate-3 hidden sm:block opacity-95"><div class="bg-white px-3 sm:px-4 py-2 sm:py-3 rounded-2xl sm:rounded-3xl border border-bloom-bubblePink shadow-cute text-center"><span class="inline-block text-sm sm:text-lg">🎀</span><div class="text-[9px] sm:text-[11px] font-extrabold text-bloom-deepRose uppercase tracking-wider">Spring Batch</div><div class="text-[8px] sm:text-[10px] font-bold text-bloom-accent">Vol. 42 Bloom</div></div></div><div class="max-w-4xl mx-auto"><div class="inline-flex items-center space-x-1.5 sm:space-x-2 bg-white px-3 sm:px-4 py-1.5 rounded-full border border-bloom-bubblePink/80 shadow-cute-sm mb-3 sm:mb-4 max-w-full"><span class="text-bloom-rose text-xs">✨</span><span class="text-[11px] sm:text-xs font-bold text-bloom-deepRose tracking-wide truncate">Perlengkapan Buket Bunga Cantik &amp; Segar</span><span class="text-bloom-rose text-xs">✨</span></div><h1 class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-bloom-cocoa font-display leading-tight sm:leading-[1.2] max-w-3xl mx-auto px-1">Find Your Dream Bouquet Made with Love &amp; Sunshine ♡</h1><p class="mt-3 sm:mt-4 text-xs sm:text-base md:text-lg font-medium text-bloom-muted max-w-xl mx-auto px-2">Ultra-fresh artisan stems hand-bundled in cute pastel wraps with wax-sealed notes &amp; instant 1-click WhatsApp concierge.</p><div class="mt-6 sm:mt-8 max-w-2xl mx-auto"><form action="#drops" class="flex flex-col sm:flex-row items-center gap-2 bg-white p-2 sm:p-2 rounded-2xl sm:rounded-full border-2 border-bloom-bubblePink shadow-cute" method="GET"><div class="flex items-center flex-grow px-3 sm:px-4 w-full"><i class="fa-solid fa-magnifying-glass text-bloom-accent mr-2 sm:mr-3 text-sm flex-shrink-0"></i><input aria-label="Search blooms and bouquets" class="w-full border-0 focus:ring-0 text-xs sm:text-sm font-semibold text-bloom-cocoa placeholder:text-bloom-muted/70 bg-transparent py-2 sm:py-2.5 px-0" placeholder="Search blooms, pastels, occasions..." type="text"></div><div class="w-full sm:w-auto border-t sm:border-t-0 sm:border-l border-bloom-bubblePink/60 pt-1.5 sm:pt-0 sm:px-3 flex items-center justify-center"><select class="w-full sm:w-auto border-0 focus:ring-0 text-xs font-bold text-bloom-deepRose bg-transparent cursor-pointer py-1.5 sm:py-2 text-center sm:text-left pr-6"><option value="all">✿ All Drops</option><option value="peonies">Pastel Peonies</option><option value="ranunculus">Wild Ranunculus</option><option value="roses">Cloud Roses</option><option value="vases">Vase Editions</option></select></div><button class="w-full sm:w-auto bg-gradient-to-r from-bloom-rose to-bloom-accent hover:from-bloom-accent hover:to-bloom-rose text-white px-5 sm:px-7 py-2.5 sm:py-3 rounded-full text-xs font-extrabold tracking-wider shadow-cute transition-all whitespace-nowrap" type="submit">Find Blooms 🌸</button></form><div class="mt-4 flex items-center justify-start sm:justify-center gap-1.5 sm:gap-2 text-[11px] sm:text-xs overflow-x-auto whitespace-nowrap pb-1 max-w-full px-1"><span class="font-bold text-bloom-deepRose flex-shrink-0 text-[11px] sm:text-xs">Trending:</span><a class="bg-white/80 hover:bg-white text-bloom-deepRose px-2.5 sm:px-3 py-1 rounded-full border border-bloom-bubblePink/60 font-semibold transition-colors shadow-cute-sm flex-shrink-0 text-[11px] sm:text-xs" href="#drops">Pastel Peonies ♡</a><a class="bg-white/80 hover:bg-white text-bloom-deepRose px-2.5 sm:px-3 py-1 rounded-full border border-bloom-bubblePink/60 font-semibold transition-colors shadow-cute-sm flex-shrink-0 text-[11px] sm:text-xs" href="#drops">Wild Ranunculus</a><a class="bg-white/80 hover:bg-white text-bloom-deepRose px-2.5 sm:px-3 py-1 rounded-full border border-bloom-bubblePink/60 font-semibold transition-colors shadow-cute-sm flex-shrink-0 text-[11px] sm:text-xs" href="#drops">Cotton Cloud ☁️</a><a class="bg-white/80 hover:bg-white text-bloom-deepRose px-2.5 sm:px-3 py-1 rounded-full border border-bloom-bubblePink/60 font-semibold transition-colors shadow-cute-sm flex-shrink-0 text-[11px] sm:text-xs" href="#drops">Birthday Lily '03</a></div></div></div></section>
+<!-- END: HeroPromoSection -->
+<!-- BEGIN: MooMoo 4-Pill Highlight Value Props (Echoing Kualitas Terbaik, Aman & Nyaman, Harga Bersahabat, Pengiriman Cepat) -->
+<section class="bg-white border-b border-bloom-softPink/60 py-6 px-4">
+<div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 px-0 sm:px-4">
+<!-- Perk 1 -->
+<div class="bg-bloom-blush/60 hover:bg-bloom-blush transition-colors p-3.5 rounded-3xl border border-bloom-bubblePink/40 flex items-center space-x-3.5 shadow-cute-sm">
+<div class="w-12 h-12 rounded-full bg-white border-2 border-bloom-bubblePink flex items-center justify-center text-bloom-rose shadow-sm flex-shrink-0">
+<i class="fa-solid fa-ribbon text-lg"></i>
+</div>
+<div>
+<h3 class="text-xs font-extrabold uppercase text-bloom-deepRose">Kualitas Terbaik</h3>
+<p class="text-[11px] font-semibold text-bloom-muted">Hand-picked fresh cuts</p>
+</div>
+</div>
+<!-- Perk 2 -->
+<div class="bg-bloom-blush/60 hover:bg-bloom-blush transition-colors p-3.5 rounded-3xl border border-bloom-bubblePink/40 flex items-center space-x-3.5 shadow-cute-sm">
+<div class="w-12 h-12 rounded-full bg-white border-2 border-bloom-bubblePink flex items-center justify-center text-bloom-rose shadow-sm flex-shrink-0">
+<i class="fa-solid fa-shield-heart text-lg"></i>
+</div>
+<div>
+<h3 class="text-xs font-extrabold uppercase text-bloom-deepRose">Aman &amp; Nyaman</h3>
+<p class="text-[11px] font-semibold text-bloom-muted">Stem hydration pack</p>
+</div>
+</div>
+<!-- Perk 3 -->
+<div class="bg-bloom-blush/60 hover:bg-bloom-blush transition-colors p-3.5 rounded-3xl border border-bloom-bubblePink/40 flex items-center space-x-3.5 shadow-cute-sm">
+<div class="w-12 h-12 rounded-full bg-white border-2 border-bloom-bubblePink flex items-center justify-center text-bloom-rose shadow-sm flex-shrink-0">
+<i class="fa-solid fa-heart text-lg"></i>
+</div>
+<div>
+<h3 class="text-xs font-extrabold uppercase text-bloom-deepRose">Harga Bersahabat</h3>
+<p class="text-[11px] font-semibold text-bloom-muted">Fair studio pricing</p>
+</div>
+</div>
+<!-- Perk 4 -->
+<div class="bg-bloom-blush/60 hover:bg-bloom-blush transition-colors p-3.5 rounded-3xl border border-bloom-bubblePink/40 flex items-center space-x-3.5 shadow-cute-sm">
+<div class="w-12 h-12 rounded-full bg-white border-2 border-bloom-bubblePink flex items-center justify-center text-emerald-500 shadow-sm flex-shrink-0">
+<i class="fa-solid fa-truck-fast text-lg"></i>
+</div>
+<div>
+<h3 class="text-xs font-extrabold uppercase text-bloom-deepRose">Pengiriman Cepat</h3>
+<p class="text-[11px] font-semibold text-bloom-muted">Same-day courier delivery</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: ValueProps -->
+<!-- BEGIN: DropsSection -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14" id="drops">
+<!-- Section Title & Filter Tabs with cute styling -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-6 gap-4 border-b border-bloom-softPink">
+<div>
+<div class="inline-flex items-center space-x-1.5 text-xs font-bold text-bloom-accent mb-1">
+<span>🌸</span>
+<span>FRESH HARVEST DAILY</span>
+</div>
+<h2 class="text-3xl font-extrabold tracking-tight text-bloom-cocoa font-display">New Floral Drops</h2>
+<p class="text-xs sm:text-sm font-semibold text-bloom-muted mt-0.5">Freshly conditioned blooms tied with signature pink ribbons.</p>
+</div>
+<!-- Filter Pill Links mirroring MooMoo highlight tabs -->
+<div class="flex items-center gap-2 overflow-x-auto pb-2 sm:pb-0 flex-nowrap sm:flex-wrap max-w-full text-xs sm:text-sm"><button type="button" class="bg-[#ff829d] text-white shadow-sm font-semibold rounded-full px-4 py-1.5 whitespace-nowrap transition-all">All Drops (18)</button><button type="button" class="bg-[#fff0f4] text-bloom-cocoa hover:bg-[#ffe0e8] border border-[#ffccd7] font-medium rounded-full px-4 py-1.5 whitespace-nowrap transition-all">Pastels ♡</button><button type="button" class="bg-[#fff0f4] text-bloom-cocoa hover:bg-[#ffe0e8] border border-[#ffccd7] font-medium rounded-full px-4 py-1.5 whitespace-nowrap transition-all">Bouquets</button><button type="button" class="bg-[#fff0f4] text-bloom-cocoa hover:bg-[#ffe0e8] border border-[#ffccd7] font-medium rounded-full px-4 py-1.5 whitespace-nowrap transition-all">Vases</button><button type="button" class="bg-[#fff0f4] text-bloom-cocoa hover:bg-[#ffe0e8] border border-[#ffccd7] font-medium rounded-full px-4 py-1.5 whitespace-nowrap transition-all">Exotics</button></div>
+</div>
+<!-- 4-Column Card Grid: Cute rounded cards with gentle pink shadows -->
+<div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+<!-- Card 1 -->
+<article class="bg-white rounded-3xl border border-bloom-bubblePink/60 p-3 shadow-cute hover:shadow-cute-lg hover:-translate-y-1 transition-all flex flex-col justify-between" data-purpose="product-card">
+<div>
+<!-- Bouquet artwork container with soft rounded corners & heart badge -->
+<div class="relative bg-bloom-blush rounded-2xl overflow-hidden aspect-square group">
+<img alt="Peony Blush Melody fresh bouquet" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtLiIKgj4MCbBD_OTifRBbs-kZngSjVM4uOAloQYvA6joC9JHPycd6xTehMXXILbwfqrKx0padkyQhbd6LRc5FNq0Hm8T3Nqfws7uSzXx9NFHrhwDifOs6Y-2M2lHaR-Xxod2r3IMsKiIzzpvVjcFEVRCmETRNV0ycjMACLGVZ9xmy0FGKgz9Nh2rKjKoPNmx8e9ueer2WhgRNYgqzT5NXaQyN7OldIysz9AcdCWw">
+<!-- Heart icon button -->
+<button aria-label="Favorite bouquet" class="absolute top-3 right-3 w-8 h-8 bg-white/90 backdrop-blur-sm rounded-full shadow-cute-sm flex items-center justify-center text-bloom-rose hover:bg-white hover:scale-110 transition-all">
+<i class="fa-solid fa-heart text-xs"></i>
+</button>
+<div class="absolute bottom-2.5 left-2.5 bg-white/95 backdrop-blur-sm px-3 py-1 text-[10px] font-extrabold text-bloom-deepRose rounded-full shadow-cute-sm border border-bloom-bubblePink/40">
+      ✿ EDITION #01
+    </div>
+</div>
+<!-- Title and Florist Avatar -->
+<div class="mt-3.5 px-1 flex items-start justify-between">
+<div class="min-w-0 pr-2">
+<h3 class="font-extrabold text-sm text-bloom-cocoa truncate">Peony Blush Melody #01</h3>
+<p class="text-[11px] font-semibold text-bloom-muted mt-0.5">Dutch Sarah Bernhardt &amp; Sweet Pea</p>
+</div>
+<div class="w-7 h-7 rounded-full bg-bloom-blush border border-bloom-bubblePink flex items-center justify-center text-xs shadow-sm flex-shrink-0" title="Florist: Mia V.">
+      🌸
+    </div>
+</div>
+</div>
+<!-- Bottom Card Action & Price -->
+<div class="mt-4 pt-3 border-t border-bloom-blush flex items-center justify-between gap-2 px-1">
+<div>
+<span class="block text-[10px] font-bold uppercase text-bloom-muted leading-tight">Sweet Price</span>
+<span class="font-extrabold text-base text-bloom-deepRose">$45.00 <span class="text-[10px] font-normal text-bloom-muted">/ 0.015 ETH</span></span>
+</div>
+<a class="bg-gradient-to-r from-bloom-rose to-bloom-accent hover:from-bloom-accent hover:to-bloom-rose text-white px-3.5 py-2 rounded-full text-xs font-bold inline-flex items-center space-x-1.5 shadow-cute-sm hover:shadow-cute transition-all" href="https://wa.me/15557897382?text=Hello%20Token%20Bloom,%20I'd%20like%20to%20order%20Peony%20Blush%20Melody%20#01" rel="noopener noreferrer" target="_blank">
+<i class="fab fa-whatsapp"></i>
+<span>Order 💬</span>
+</a>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="bg-white rounded-3xl border border-bloom-bubblePink/60 p-3 shadow-cute hover:shadow-cute-lg hover:-translate-y-1 transition-all flex flex-col justify-between" data-purpose="product-card">
+<div>
+<!-- Bouquet artwork container -->
+<div class="relative bg-amber-50/60 rounded-2xl overflow-hidden aspect-square group">
+<img alt="Sunshine Poppy and Daisy fresh floral arrangement" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsofo_F90fId9co0Im6FbZtQ4w9wRnRgikI4sk_sZbcaXMxq6sKN-8o0HXrQ-hRonT35C_2RGu8-6_JXocImtw4KHoMUEOe71jzLZdSTMzFqhveFSvpkHTX6drxTfiA-vsgF54M8Tmu9UfHYX-3vrGNbUQ3-6UoEeq2rc9vP3yo_Yx3HeWz_Chun6r6WexFnI9q49ine_ykDRzKSUVad2E3I5pVzaXsxvfJoq2mhs">
+<button aria-label="Favorite bouquet" class="absolute top-3 right-3 w-8 h-8 bg-white/90 backdrop-blur-sm rounded-full shadow-cute-sm flex items-center justify-center text-bloom-muted hover:text-bloom-rose hover:bg-white hover:scale-110 transition-all">
+<i class="fa-regular fa-heart text-xs"></i>
+</button>
+<div class="absolute bottom-2.5 left-2.5 bg-white/95 backdrop-blur-sm px-3 py-1 text-[10px] font-extrabold text-amber-700 rounded-full shadow-cute-sm border border-amber-200">
+      ✿ EDITION #02
+    </div>
+</div>
+<!-- Title and Florist Avatar -->
+<div class="mt-3.5 px-1 flex items-start justify-between">
+<div class="min-w-0 pr-2">
+<h3 class="font-extrabold text-sm text-bloom-cocoa truncate">Sunshine Poppy &amp; Daisy #02</h3>
+<p class="text-[11px] font-semibold text-bloom-muted mt-0.5">Wild Icelandic Poppies &amp; Chamomile</p>
+</div>
+<div class="w-7 h-7 rounded-full bg-amber-100 border border-amber-200 flex items-center justify-center text-xs shadow-sm flex-shrink-0" title="Florist: Kenji S.">
+      🌼
+    </div>
+</div>
+</div>
+<!-- Bottom Card Action & Price -->
+<div class="mt-4 pt-3 border-t border-bloom-blush flex items-center justify-between gap-2 px-1">
+<div>
+<span class="block text-[10px] font-bold uppercase text-bloom-muted leading-tight">Sweet Price</span>
+<span class="font-extrabold text-base text-bloom-deepRose">$38.00 <span class="text-[10px] font-normal text-bloom-muted">/ 0.012 ETH</span></span>
+</div>
+<a class="bg-gradient-to-r from-bloom-rose to-bloom-accent hover:from-bloom-accent hover:to-bloom-rose text-white px-3.5 py-2 rounded-full text-xs font-bold inline-flex items-center space-x-1.5 shadow-cute-sm hover:shadow-cute transition-all" href="https://wa.me/15557897382?text=Hello%20Token%20Bloom,%20I'd%20like%20to%20order%20Sunshine%20Poppy%20and%20Daisy%20#02" rel="noopener noreferrer" target="_blank">
+<i class="fab fa-whatsapp"></i>
+<span>Order 💬</span>
+</a>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="bg-white rounded-3xl border border-bloom-bubblePink/60 p-3 shadow-cute hover:shadow-cute-lg hover:-translate-y-1 transition-all flex flex-col justify-between" data-purpose="product-card">
+<div>
+<!-- Bouquet artwork container -->
+<div class="relative bg-purple-50/60 rounded-2xl overflow-hidden aspect-square group">
+<img alt="Royal Lilac Hydrangea bespoke bouquet" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQVa0IX0z9nY5gKf1ol0lQCyStOqN7is977obrgXhbZUj1s1_AV46AlYfaCOHBbU8N4W5b4jciR1iyDs7yQax2FcLcpyDxAME62eGFDjomRlzKCbC6I4f_akoBjQ0r4MKoRjR6BuWbAHvlYuyimlvap-jZ_pA6hNk-V4jLYJrx0QJBfBI1t9WmbOyo7M-d-i-bCvn9-JcpvdTnQlZ19vl4UnD8L9hLZ_tujeKoH5Y">
+<button aria-label="Favorite bouquet" class="absolute top-3 right-3 w-8 h-8 bg-white/90 backdrop-blur-sm rounded-full shadow-cute-sm flex items-center justify-center text-bloom-rose hover:bg-white hover:scale-110 transition-all">
+<i class="fa-solid fa-heart text-xs"></i>
+</button>
+<div class="absolute bottom-2.5 left-2.5 bg-white/95 backdrop-blur-sm px-3 py-1 text-[10px] font-extrabold text-purple-700 rounded-full shadow-cute-sm border border-purple-200">
+      ✿ EDITION #03
+    </div>
+</div>
+<!-- Title and Florist Avatar -->
+<div class="mt-3.5 px-1 flex items-start justify-between">
+<div class="min-w-0 pr-2">
+<h3 class="font-extrabold text-sm text-bloom-cocoa truncate">Royal Lilac Hydrangea #03</h3>
+<p class="text-[11px] font-semibold text-bloom-muted mt-0.5">Antique Lavender &amp; Delphinium</p>
+</div>
+<div class="w-7 h-7 rounded-full bg-purple-100 border border-purple-200 flex items-center justify-center text-xs shadow-sm flex-shrink-0" title="Florist: Tara L.">
+      🪻
+    </div>
+</div>
+</div>
+<!-- Bottom Card Action & Price -->
+<div class="mt-4 pt-3 border-t border-bloom-blush flex items-center justify-between gap-2 px-1">
+<div>
+<span class="block text-[10px] font-bold uppercase text-bloom-muted leading-tight">Sweet Price</span>
+<span class="font-extrabold text-base text-bloom-deepRose">$55.00 <span class="text-[10px] font-normal text-bloom-muted">/ 0.018 ETH</span></span>
+</div>
+<a class="bg-gradient-to-r from-bloom-rose to-bloom-accent hover:from-bloom-accent hover:to-bloom-rose text-white px-3.5 py-2 rounded-full text-xs font-bold inline-flex items-center space-x-1.5 shadow-cute-sm hover:shadow-cute transition-all" href="https://wa.me/15557897382?text=Hello%20Token%20Bloom,%20I'd%20like%20to%20order%20Royal%20Lilac%20Hydrangea%20#03" rel="noopener noreferrer" target="_blank">
+<i class="fab fa-whatsapp"></i>
+<span>Order 💬</span>
+</a>
+</div>
+</article>
+<!-- Card 4 -->
+<article class="bg-white rounded-3xl border border-bloom-bubblePink/60 p-3 shadow-cute hover:shadow-cute-lg hover:-translate-y-1 transition-all flex flex-col justify-between" data-purpose="product-card">
+<div>
+<!-- Bouquet artwork container -->
+<div class="relative bg-rose-50/60 rounded-2xl overflow-hidden aspect-square group">
+<img alt="Cloud Whispers White Rose arrangement" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSosHadoz4X1V0B3rV2dH2Wt5WQq4yR_MZCrS_0akopgi6FalMEoGaW5DWAQBk58zlKDpP7Gyyr5GtsxrQTYWE2L_bzeb6EHLz4EcZ_6UNNzLx6IiYaLB4-X7egtcT3wofblRnC5JLJH_5CqnnSc2zkYZVzX7_RVq6De2Y0OmLZyK3wZPIfKHCOd3nFAECtEBAAwz6O2yioPStMGoFNokI00HxEioV7_RrEP-u488">
+<button aria-label="Favorite bouquet" class="absolute top-3 right-3 w-8 h-8 bg-white/90 backdrop-blur-sm rounded-full shadow-cute-sm flex items-center justify-center text-bloom-muted hover:text-bloom-rose hover:bg-white hover:scale-110 transition-all">
+<i class="fa-regular fa-heart text-xs"></i>
+</button>
+<div class="absolute bottom-2.5 left-2.5 bg-white/95 backdrop-blur-sm px-3 py-1 text-[10px] font-extrabold text-pink-700 rounded-full shadow-cute-sm border border-pink-200">
+      ✿ EDITION #04
+    </div>
+</div>
+<!-- Title and Florist Avatar -->
+<div class="mt-3.5 px-1 flex items-start justify-between">
+<div class="min-w-0 pr-2">
+<h3 class="font-extrabold text-sm text-bloom-cocoa truncate">Cloud Whispers White Rose #04</h3>
+<p class="text-[11px] font-semibold text-bloom-muted mt-0.5">Playa Blanca Roses &amp; Fluffy Cotton</p>
+</div>
+<div class="w-7 h-7 rounded-full bg-slate-100 border border-slate-200 flex items-center justify-center text-xs shadow-sm flex-shrink-0" title="Florist: Alex M.">
+      🤍
+    </div>
+</div>
+</div>
+<!-- Bottom Card Action & Price -->
+<div class="mt-4 pt-3 border-t border-bloom-blush flex items-center justify-between gap-2 px-1">
+<div>
+<span class="block text-[10px] font-bold uppercase text-bloom-muted leading-tight">Sweet Price</span>
+<span class="font-extrabold text-base text-bloom-deepRose">$48.00 <span class="text-[10px] font-normal text-bloom-muted">/ 0.016 ETH</span></span>
+</div>
+<a class="bg-gradient-to-r from-bloom-rose to-bloom-accent hover:from-bloom-accent hover:to-bloom-rose text-white px-3.5 py-2 rounded-full text-xs font-bold inline-flex items-center space-x-1.5 shadow-cute-sm hover:shadow-cute transition-all" href="https://wa.me/15557897382?text=Hello%20Token%20Bloom,%20I'd%20like%20to%20order%20Cloud%20Whispers%20White%20Rose%20#04" rel="noopener noreferrer" target="_blank">
+<i class="fab fa-whatsapp"></i>
+<span>Order 💬</span>
+</a>
+</div>
+</article>
+</div>
+<!-- Cute Custom Arrangement Callout in friendly pill -->
+<div class="mt-12 text-center">
+<a class="inline-flex items-center justify-center space-x-2 bg-white hover:bg-bloom-blush text-bloom-deepRose border-2 border-bloom-bubblePink px-4 sm:px-8 py-3 sm:py-3.5 rounded-full text-xs sm:text-sm font-extrabold shadow-cute hover:shadow-cute-lg hover:-translate-y-0.5 transition-all max-w-full text-center" href="https://wa.me/15557897382?text=Hi!%20Could%20you%20share%20the%20complete%20today%27s%20florist%20catalog%20with%20me%3F" rel="noopener noreferrer" target="_blank"><span>Request Custom Flower Bundle via WhatsApp</span><span class="text-bloom-rose">💌</span><i class="fa-solid fa-arrow-right text-xs"></i></a>
+</div>
+</section>
+<!-- END: DropsSection -->
+<!-- BEGIN: HowItWorksWhatsApp (Sweet Pastel Step Cards with cute pill numbers) -->
+<section class="bg-white/80 border-y border-bloom-softPink py-16 px-4 sm:px-6 lg:px-8">
+<div class="max-w-7xl mx-auto">
+<div class="text-center max-w-2xl mx-auto">
+<span class="inline-block bg-bloom-blush text-bloom-deepRose px-4 py-1.5 rounded-full text-xs font-bold border border-bloom-bubblePink shadow-cute-sm mb-3">
+  🌸 ZERO FRICTION WHATSAPP PROTOCOL 🌸
+</span>
+<h2 class="text-2xl sm:text-4xl font-extrabold text-bloom-cocoa font-display">How WhatsApp Ordering Works</h2>
+<p class="mt-2 text-sm text-bloom-muted font-semibold">Skip lengthy checkout forms. Connect directly with our live studio florist in 3 sweet steps.</p>
+</div>
+<div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+<!-- Step 1 -->
+<div class="bg-bloom-cream rounded-3xl p-6 border border-bloom-bubblePink/60 shadow-cute hover:-translate-y-1 transition-transform relative">
+<div class="w-12 h-12 bg-gradient-to-tr from-bloom-rose to-bloom-accent text-white font-extrabold text-sm flex items-center justify-center rounded-2xl shadow-cute-sm mb-4">
+    01
+  </div>
+<h3 class="font-extrabold text-lg text-bloom-cocoa">1. Pick or Screenshot</h3>
+<p class="mt-2 text-xs sm:text-sm text-bloom-muted font-semibold leading-relaxed">
+    Select your favorite drop number from our studio grid or send an inspirational photo from your saved camera roll.
+  </p>
+</div>
+<!-- Step 2 -->
+<div class="bg-bloom-cream rounded-3xl p-6 border border-bloom-bubblePink/60 shadow-cute hover:-translate-y-1 transition-transform relative">
+<div class="w-12 h-12 bg-white text-bloom-deepRose border-2 border-bloom-bubblePink font-extrabold text-sm flex items-center justify-center rounded-2xl shadow-cute-sm mb-4">
+    02
+  </div>
+<h3 class="font-extrabold text-lg text-bloom-cocoa">2. Live Stem Video Approval</h3>
+<p class="mt-2 text-xs sm:text-sm text-bloom-muted font-semibold leading-relaxed">
+    Our lead designer sends a preview video of your fresh stems and writes your personalized greeting card note on camera.
+  </p>
+</div>
+<!-- Step 3 -->
+<div class="bg-bloom-blush rounded-3xl p-6 border border-bloom-bubblePink shadow-cute hover:-translate-y-1 transition-transform relative">
+<div class="w-12 h-12 bg-emerald-500 text-white font-extrabold text-sm flex items-center justify-center rounded-2xl shadow-cute-sm mb-4">
+    03
+  </div>
+<h3 class="font-extrabold text-lg text-bloom-deepRose">3. Chilled Courier Delivery</h3>
+<p class="mt-2 text-xs sm:text-sm text-bloom-muted font-semibold leading-relaxed">
+    Get direct GPS live tracking on WhatsApp. Stems travel bundled in temperature-controlled water hydration packs.
+  </p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HowItWorksWhatsApp -->
+<!-- BEGIN: SocialStudioFeed (Sweet Instagram & TikTok studio grid) -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16" id="social">
+<!-- Social Header & Live Handles -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between mb-8 gap-4">
+<div>
+<div class="flex items-center space-x-2 text-xs font-bold text-bloom-rose tracking-wide mb-1">
+<i class="fa-brands fa-instagram text-base"></i>
+<span>@tokenbloom.studio • @bloomsbyhand ♡</span>
+</div>
+<h2 class="text-3xl sm:text-4xl font-extrabold text-bloom-cocoa font-display">Studio Feed &amp; Reels</h2>
+<p class="text-xs sm:text-sm text-bloom-muted font-semibold mt-1">42.8k flower lovers watching our morning floral wrap sessions.</p>
+</div>
+<div class="flex items-center gap-3">
+<a class="bg-white hover:bg-bloom-blush text-bloom-deepRose border border-bloom-bubblePink px-4 py-2 rounded-full text-xs font-bold shadow-cute-sm hover:-translate-y-0.5 transition-all inline-flex items-center space-x-2" href="https://instagram.com" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-instagram text-pink-500 text-sm"></i>
+<span>Follow Instagram</span>
+</a>
+<a class="bg-white hover:bg-bloom-blush text-bloom-deepRose border border-bloom-bubblePink px-4 py-2 rounded-full text-xs font-bold shadow-cute-sm hover:-translate-y-0.5 transition-all inline-flex items-center space-x-2" href="https://tiktok.com" rel="noopener noreferrer" target="_blank">
+<i class="fa-brands fa-tiktok text-bloom-cocoa text-sm"></i>
+<span>Watch TikTok</span>
+</a>
+</div>
+</div>
+<!-- Social Media 4-Grid Preview in rounded bubbly frames -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
+<!-- Post 1 -->
+<div class="group relative aspect-square bg-bloom-blush rounded-3xl overflow-hidden border border-bloom-bubblePink/60 shadow-cute">
+<img alt="Florist hand tying silk ribbons" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIDtUGS80whuNlllUkzpFSfmdTw2QLPYE2D27CIcCO-t7-EddasnuLlWeFjZmOaJ2B22MRNzTzVziIhT1Pk0VknwRdiIPonMbSaLfHxxcm43_hhCyhMyjK8XuEV-qL_o4EIJOKayXHYywzrGebVdyD4ESJBYpdy0HJKj3_lfIIFd0nj8g5k029IV7tnhVh3mdPPiBFVxXCQccqkytjFYjrfVis0ep63HQw0Me3XVQ">
+<div class="absolute inset-0 bg-gradient-to-t from-bloom-cocoa/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-between p-4 text-white text-xs">
+<div class="flex justify-end">
+<span class="bg-white/30 backdrop-blur-sm p-1.5 rounded-full"><i class="fa-brands fa-tiktok text-xs"></i></span>
+</div>
+<div>
+<p class="font-bold line-clamp-2">"Behind the scenes wrapping 60 stems of peony velvet 🎀"</p>
+<span class="text-[10px] font-bold text-bloom-bubblePink">142.4K views</span>
+</div>
+</div>
+</div>
+<!-- Post 2 -->
+<div class="group relative aspect-square bg-bloom-blush rounded-3xl overflow-hidden border border-bloom-bubblePink/60 shadow-cute">
+<img alt="Morning floral market conditioning" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByl9KfpN0l0wVu039Ko60C5XSCEyEbe5Yvn21h7vD8KRzCe3mEd0_6HT7XbNXxqOh2VLyfnaoAKyGMLxvBq7OOSnQQkbPpEprh6SwZLjCCpy4PWKAeUjsJP-JxLOy8rGLEv0gydadYEYLv2RbpwbsTeq4UXyJfSKmA6Y3QBRgaDhOAUufyrxApMFqlRULuG9WeVNlqor1O8RFdr0tsLrx8n4OjwEez6DageYgLVVE">
+<div class="absolute inset-0 bg-gradient-to-t from-bloom-cocoa/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-between p-4 text-white text-xs">
+<div class="flex justify-end">
+<span class="bg-white/30 backdrop-blur-sm p-1.5 rounded-full"><i class="fa-brands fa-instagram text-xs"></i></span>
+</div>
+<div>
+<p class="font-bold line-clamp-2">5:30 AM flower mart haul: Rare blush French ranunculus 🥐</p>
+<span class="text-[10px] font-bold text-bloom-bubblePink">4.8k likes</span>
+</div>
+</div>
+</div>
+<!-- Post 3 -->
+<div class="group relative aspect-square bg-bloom-blush rounded-3xl overflow-hidden border border-bloom-bubblePink/60 shadow-cute">
+<img alt="Packaging bouquets in neo-brutalist pink paper" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHK6SJ-ElykFHNu0dcpDT39CUqO8IE2W__V-IvobuZ7tCeDh1bq7B0RdcG5k_Nbg8lZS1T9NfdxE1RE_K_-0HyqQCEQWIwwwES0_09-HyCM6BwDWyWI89plzzrkaLnQXnBYyWdWYFC-RjPdwdC3LevrJhhs3xDOmVy2qyriWnge7CC9KAL8GYmXCGEumU9vrf8ULNqcJa37UIfk7xnLIjdV3FtNxjDlG6Idzq_k9w">
+<div class="absolute inset-0 bg-gradient-to-t from-bloom-cocoa/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-between p-4 text-white text-xs">
+<div class="flex justify-end">
+<span class="bg-white/30 backdrop-blur-sm p-1.5 rounded-full"><i class="fa-brands fa-tiktok text-xs"></i></span>
+</div>
+<div>
+<p class="font-bold line-clamp-2">ASMR wax seal stamp on our signature cotton greeting notes ✨</p>
+<span class="text-[10px] font-bold text-bloom-bubblePink">88.9K views</span>
+</div>
+</div>
+</div>
+<!-- Post 4 -->
+<div class="group relative aspect-square bg-bloom-blush rounded-3xl overflow-hidden border border-bloom-bubblePink/60 shadow-cute">
+<img alt="Floral composition with ceramic vessel" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKnBcBaQ3J_TNGYDMyHhf2ui4wza2KO-n8AHRo3HYgL_e_H9swmo4VGqiZ-pvZuv5t2hwtLTNY3c_eGnx6-NcMboKFdMck41Z1vlctkc3R3LeLNnFCQ0dhKeVmvfx-dDCOkq93IPZQseKNk2qFpjUCcSOtstcHxQ7fWkUrn-tlTQHSJuKNoDuzDZAH3YeqJ-BJ4jUGinAL4yjXJ_kFcm9CeCxtdxh61kYwtRufgig">
+<div class="absolute inset-0 bg-gradient-to-t from-bloom-cocoa/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-between p-4 text-white text-xs">
+<div class="flex justify-end">
+<span class="bg-white/30 backdrop-blur-sm p-1.5 rounded-full"><i class="fa-brands fa-instagram text-xs"></i></span>
+</div>
+<div>
+<p class="font-bold line-clamp-2">Drop #05 Preview: The Sunset Clementine Vase Edition 🍊</p>
+<span class="text-[10px] font-bold text-bloom-bubblePink">3.1k likes</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: SocialStudioFeed -->
+<!-- BEGIN: WhatsAppStickyCTA (Cute rounded bubble pill) -->
+<aside class="fixed bottom-3 right-3 sm:bottom-6 sm:right-6 z-50" data-purpose="floating-quick-action"><a aria-label="Chat with Billa.flore florist on WhatsApp" class="bg-[#25D366] hover:bg-[#20be5b] text-white p-2.5 sm:px-5 sm:py-3 rounded-full shadow-cute-lg flex items-center sm:space-x-3 hover:scale-105 transition-all group" href="https://wa.me/15557897382?text=Hi%20Token%20Bloom!%20I'd%20like%20to%20place%20an%20order" rel="noopener noreferrer" target="_blank"><div class="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0"><i class="fab fa-whatsapp text-xl sm:text-2xl text-white group-hover:rotate-12 transition-transform"></i></div><div class="text-left font-sans pr-1 hidden sm:block"><span class="block text-[10px] uppercase font-extrabold tracking-wider leading-none text-emerald-950">Florist Chat</span><span class="font-extrabold text-sm tracking-tight text-white leading-tight">Order via WhatsApp 💬</span></div></a></aside>
+<!-- END: WhatsAppStickyCTA -->
+</main>
+<!-- END: MainContent -->
+<!-- BEGIN: Cute Scalloped Banner Bar (Inspired by the bottom scalloped bar in MooMoo sheet) -->
+<div class="bg-bloom-deepRose text-white pt-3 pb-4 px-4 overflow-hidden relative">
+<div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-2 text-center text-xs sm:text-sm font-bold tracking-wide py-1 px-2">
+<div class="flex items-center justify-center space-x-1.5 sm:space-x-2">
+<span class="text-sm">🌸</span>
+<span>Bunga Segar Terjamin</span>
+</div>
+<div class="flex items-center justify-center space-x-1.5 sm:space-x-2">
+<span class="text-sm">♡</span>
+<span>Pita &amp; Kartu Gratis</span>
+</div>
+<div class="flex items-center justify-center space-x-1.5 sm:space-x-2">
+<span class="text-sm">💌</span>
+<span>WhatsApp Foto Setuju</span>
+</div>
+<div class="flex items-center justify-center space-x-1.5 sm:space-x-2">
+<span class="text-sm">✨</span>
+<span>Pengiriman Cepat Aman</span>
+</div>
+</div>
+</div>
+<!-- END: Cute Scalloped Banner Bar -->
+<!-- BEGIN: MainFooter (Cute Boutique Footer with pale pink styling) -->
+<footer class="bg-bloom-blush/80 border-t border-bloom-bubblePink pt-12 pb-8 px-4 sm:px-6 lg:px-8">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-bloom-bubblePink/60">
+<!-- Brand Info -->
+<div class="md:col-span-2">
+<div class="flex items-center space-x-3 mb-3">
+<div class="w-10 h-10 bg-white rounded-full border border-bloom-bubblePink flex items-center justify-center text-lg text-bloom-rose shadow-cute-sm">
+    🌸
+  </div>
+<span class="text-xl font-extrabold tracking-tight text-bloom-deepRose font-display">Billa.flore Studio ♡</span>
+</div>
+<p class="text-xs sm:text-sm text-bloom-muted max-w-sm font-medium mb-4 leading-relaxed">
+  Curated boutique floral studio. Fresh delicate cuts, aesthetic pastel ribbons, and zero-friction WhatsApp concierge ordering.
+</p>
+<div class="text-xs font-semibold text-bloom-cocoa space-y-1">
+<p><strong class="text-bloom-deepRose">Studio:</strong> 84 Orchard Street, Lower East Side, NY 10002</p>
+<p><strong class="text-bloom-deepRose">WhatsApp:</strong> +1 (555) 789-PETAL (24/7 Priority Drops)</p>
+</div>
+</div>
+<!-- Quick Links -->
+<div>
+<h4 class="font-extrabold text-xs uppercase tracking-wider text-bloom-deepRose mb-3">Sweet Collections</h4>
+<ul class="space-y-2 text-xs font-semibold text-bloom-muted">
+<li><a class="hover:text-bloom-rose transition-colors" href="#drops">Pastel Peonies ♡</a></li>
+<li><a class="hover:text-bloom-rose transition-colors" href="#drops">Wild Ranunculus</a></li>
+<li><a class="hover:text-bloom-rose transition-colors" href="#drops">Cotton Cloud Editions</a></li>
+<li><a class="hover:text-bloom-rose transition-colors" href="#drops">Custom Ceramic Vases</a></li>
+<li><a class="hover:text-bloom-rose transition-colors" href="#drops">Gift Subscriptions</a></li>
+</ul>
+</div>
+<!-- Newsletter Drop Subscribe in cute pill -->
+<div>
+<h4 class="font-extrabold text-xs uppercase tracking-wider text-bloom-deepRose mb-3">Drop Alerts 💌</h4>
+<p class="text-xs text-bloom-muted font-semibold mb-3">Get pinged when limited sweet stems arrive.</p>
+<form class="space-y-2" onsubmit="event.preventDefault(); alert('Subscribed with love to drop alerts! 🌸');">
+<input class="w-full text-xs font-semibold px-4 py-2.5 bg-white rounded-full border border-bloom-bubblePink focus:ring-2 focus:ring-bloom-accent focus:border-bloom-accent" placeholder="your@email.com" required="" type="email">
+<button class="w-full bg-gradient-to-r from-bloom-rose to-bloom-accent hover:from-bloom-accent hover:to-bloom-rose text-white text-xs font-extrabold tracking-wider py-2.5 rounded-full shadow-cute hover:shadow-cute-lg transition-all" type="submit">
+    Join Drop List ♡
+  </button>
+</form>
+</div>
+</div>
+<!-- Copyright & Disclaimer -->
+<div class="mt-8 flex flex-col sm:flex-row items-center justify-between text-xs font-semibold text-bloom-muted gap-4">
+<p>© 2025 Billa.flore BOTANICAL LAB. Made with love &amp; fresh petals.</p>
+<div class="flex items-center space-x-6">
+<a class="hover:text-bloom-rose transition-colors" href="#">Terms of Delivery</a>
+<a class="hover:text-bloom-rose transition-colors" href="#">Stem Care Guide</a>
+<a class="text-emerald-600 font-extrabold hover:underline" href="https://wa.me/15557897382">WhatsApp Direct 💬</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- END: MainFooter -->
+
+
+</body></html>
